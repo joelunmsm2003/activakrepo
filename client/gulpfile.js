@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 		}))
 
 		//.pipe(gulp.dest('./build/css/'))
-		.pipe(gulp.dest('/var/www/html/calidad/css/'))
+		.pipe(gulp.dest('/var/www/html/calidad/build/css/'))
 		//.pipe(rename({suffix: '.min'}))
 		//.pipe(cssnano())
 		//.pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
@@ -55,7 +55,7 @@ gulp.task('app-js', function() {
 		.pipe(jshint.reporter('jshint-stylish'))
 		.pipe(concat('app.js'))
 		//.pipe(gulp.dest('./build/js'))
-		.pipe(gulp.dest('/var/www/html/calidad/js/'))
+		.pipe(gulp.dest('/var/www/html/calidad/build/js/'))
 		//.pipe(rename({suffix: '.min'}))
 		//.pipe(uglify({mangle: false}))
 		//.pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
@@ -68,33 +68,26 @@ gulp.task('vendor-js', function() {
 		
 	// Grab your custom scripts
 
-	'./bower_components/angular/angular.js',
-    './bower_components/angular-ui-router/release/angular-ui-router.js',
-    './bower_components/ngstorage/ngStorage.js',
-    './bower_components/jquery/dist/jquery.js',
-    './bower_components/form.js',
-    './bower_components/bootstrap/dist/js/bootstrap.js',
-    './bower_components/angular-translate/angular-translate.js',
-    './bower_components/angular-animate/angular-animate.js',
-    './bower_components/angular-touch/angular-touch.js',
-    './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-    './bower_components/angular-route/angular-route.js',
-    './bower_components/sweetalert/dist/sweetalert.min.js',
-    './bower_components/angular-scroll/angular-scroll.js',
-    './bower_components/ng-flow/dist/ng-flow-standalone.js',
-    './bower_components/flow.js/dist/flow.js',
-    './bower_components/ng-flow/dist/ng-flow.js',
-    './bower_components/angular-xeditable/dist/js/xeditable.js',
-    './bower_components/responsive-bootstrap-toolkit/src/bootstrap-toolkit.js',
-    './bower_components/bootstrap-touchspin/src/jquery.bootstrap-touchspin.js',
-    './bower_components/angular-resource/angular-resource.js',
-    './bower_components/ngmap/build/scripts/ng-map.min.js',
-    './bower_components/angular-gettext/dist/angular-gettext.min.js',
-    './bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.js',
-    './bower_components/angular-un-svg/dist/un-svg.js',
-    './bower_components/angularjs-slider/dist/rzslider.js',
-    './bower_components/angular-input-stars-directive/angular-input-stars.js',
-    './bower_components/angular-sanitize/angular-sanitize.js',
+	'./node_modules/angular/angular.js',
+    './node_modules/angular-ui-router/release/angular-ui-router.js',
+    './node_modules/ngstorage/ngStorage.js',
+    './node_modules/jquery/dist/jquery.js',
+    './node_modules/bootstrap/dist/js/bootstrap.js',
+    './node_modules/angular-bootstrap/ui-bootstrap-tpls.js',
+    './node_modules/angular-route/angular-route.js',
+    './node_modules/sweetalert/dist/sweetalert.min.js',
+    './node_modules/angular-scroll/angular-scroll.js',
+    './node_modules/angular-xeditable/dist/js/xeditable.js',
+    './node_modules/responsive-bootstrap-toolkit/src/bootstrap-toolkit.js',
+    './node_modules/bootstrap-touchspin/src/jquery.bootstrap-touchspin.js',
+    './node_modules/angular-resource/angular-resource.js',
+    './node_modules/ngmap/build/scripts/ng-map.min.js',
+    './node_modules/angular-gettext/dist/angular-gettext.min.js',
+    './node_modules/angular-dynamic-locale/dist/tmhDynamicLocale.js',
+    './node_modules/angular-un-svg/dist/un-svg.js',
+    './node_modules/angularjs-slider/dist/rzslider.js',
+    './node_modules/angular-input-stars-directive/angular-input-stars.js',
+    './node_modules/angular-sanitize/angular-sanitize.js',
 				
 	])
 		.pipe(plumber())
@@ -107,7 +100,7 @@ gulp.task('vendor-js', function() {
 		.pipe(uglify())
 		.pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
 		//.pipe(gulp.dest('./build/js'))
-		.pipe(gulp.dest('/var/www/html/calidad/js/'))
+		.pipe(gulp.dest('/var/www/html/calidad/build/js/'))
 }); 
 
 
@@ -116,13 +109,9 @@ gulp.task('vendor-js', function() {
 gulp.task('watch', function() {
 
 	gulp.watch('./components/app.js', ['app-js']);
-
 	gulp.watch('./components/**/*.js', ['app-js']);
-
 	gulp.watch('./components/**/*.html', ['html']);
-
 	gulp.watch('./components/**/*.scss', ['styles']);
-
 	gulp.watch('./variables.scss', ['styles']);
 	
 }); 
@@ -158,5 +147,5 @@ gulp.task('translations', function () {
 gulp.task('html',function(){
     gulp.src('./components/**/*.html')
     //.pipe(gulp.dest('./build/html'));
-    .pipe(gulp.dest('/var/www/html/calidad/html'));
+    .pipe(gulp.dest('/var/www/html/calidad/build/html'));
 });

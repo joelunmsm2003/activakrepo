@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('llamadascomponent', {
-    templateUrl: '/calidad/html/llamadas/llamadas.html',
+    templateUrl: '/activak/build/html/llamadas/llamadas.html',
     controller: LlamadasController
 
   });

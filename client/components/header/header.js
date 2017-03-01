@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('headercomponent', {
-    templateUrl: '/calidad/html/header/header.html',
+    templateUrl: '/activak/build/html/header/header.html',
     controller: HeaderController
   });
 

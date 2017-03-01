@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('formulariocomponent', {
-    templateUrl: '/calidad/html/formulario/formulario.html',
+    templateUrl: '/activak/build/html/formulario/formulario.html',
     controller: FormularioController,
     bindings: {
         onDelete: '&'

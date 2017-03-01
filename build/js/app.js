@@ -18,7 +18,7 @@ function UserService ($http,$q,$log,$localStorage) {
 
 angular
 
-.module('app', ['ngSanitize','angular-input-stars','rzModule','ui.router','ngStorage','ui.bootstrap','ngAnimate','ngTouch','ngScrollTo','flow','xeditable','ngResource','gettext','ngMap','ngLocale','tmh.dynamicLocale','wyvernzora.un-svg'])
+.module('app', ['ui.router','ngStorage','ui.bootstrap'])
       
 .config(routesConfig)
 
@@ -38,7 +38,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider,$htt
 		});
 
 
-	host = 'http://192.168.40.4/calidad/controllers'
+	host = 'http://localhost/activak/build'
 
 	//$locationProvider.html5Mode(true);
 

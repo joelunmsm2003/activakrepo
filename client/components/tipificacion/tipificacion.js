@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('tipificacioncomponent', {
-    templateUrl: '/calidad/html/tipificacion/tipificacion.html',
+    templateUrl: '/activak/build/html/tipificacion/tipificacion.html',
     controller: TipificacionController,
     bindings: {
         pasabase: '='

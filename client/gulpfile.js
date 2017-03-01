@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 		}))
 
 		//.pipe(gulp.dest('./build/css/'))
-		.pipe(gulp.dest('/var/www/html/calidad/build/css/'))
+		.pipe(gulp.dest('/var/www/html/activak/build/css/'))
 		//.pipe(rename({suffix: '.min'}))
 		//.pipe(cssnano())
 		//.pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
@@ -55,7 +55,7 @@ gulp.task('app-js', function() {
 		.pipe(jshint.reporter('jshint-stylish'))
 		.pipe(concat('app.js'))
 		//.pipe(gulp.dest('./build/js'))
-		.pipe(gulp.dest('/var/www/html/calidad/build/js/'))
+		.pipe(gulp.dest('/var/www/html/activak/build/js/'))
 		//.pipe(rename({suffix: '.min'}))
 		//.pipe(uglify({mangle: false}))
 		//.pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
@@ -95,12 +95,12 @@ gulp.task('vendor-js', function() {
 		.pipe(jshint())
 		.pipe(jshint.reporter('jshint-stylish'))
 		.pipe(concat('vendor.js'))
-		.pipe(gulp.dest('./build/js'))
+		//.pipe(gulp.dest('./build/js'))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
 		//.pipe(gulp.dest('./build/js'))
-		.pipe(gulp.dest('/var/www/html/calidad/build/js/'))
+		.pipe(gulp.dest('/var/www/html/activak/build/js/'))
 }); 
 
 
@@ -147,5 +147,5 @@ gulp.task('translations', function () {
 gulp.task('html',function(){
     gulp.src('./components/**/*.html')
     //.pipe(gulp.dest('./build/html'));
-    .pipe(gulp.dest('/var/www/html/calidad/build/html'));
+    .pipe(gulp.dest('/var/www/html/activak/build/html'));
 });

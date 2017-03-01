@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('foootercomponent', {
-    templateUrl: '/calidad/html/footer/footer.html',
+    templateUrl: '/activak/build/html/footer/footer.html',
     controller: FooterController
   });
 

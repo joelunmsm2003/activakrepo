@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('homecomponent', {
-    templateUrl: '/calidad/html/home/home.html',
+    templateUrl: '/activak/build/html/home/home.html',
     controller: HomeController
 
   });

@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('reportecomponent', {
-    templateUrl: '/calidad/html/reporte/reporte.html',
+    templateUrl: '/activak/build/html/reporte/reporte.html',
     controller: ReporteController
 
   });

@@ -1,7 +1,7 @@
 angular
   .module('app')
   .component('historialcomponent', {
-    templateUrl: '/calidad/html/historial/historial.html',
+    templateUrl: '/activak/build/html/historial/historial.html',
     controller: HistorialController
 
   });

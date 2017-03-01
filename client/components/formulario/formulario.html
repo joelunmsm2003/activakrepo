@@ -1,0 +1,147 @@
+
+
+
+
+ 						<div class='row'>
+
+ 						<div class='col-md-6'>
+	
+								<legend>DATOS PERSONALES</legend>
+
+
+								<div class="form-group">
+									<label for="nombre">Nombre</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.NOMBRE'  id="nombre">
+								</div>
+
+
+								<div class="form-group">
+									<label for="dni">DNI</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.DNI'  id="dni">
+								</div>
+
+
+								<div class="form-group">
+
+									 <label for="estado">Telefono</label>
+
+									
+									<span ng-click='llamar(agente.TELEFONO1)' ng-if='agente.TELEFONO1' class='telefono'>{{agente.TELEFONO1}}</span>
+									<span ng-click='llamar(agente.TELEFONO2)' ng-if='agente.TELEFONO2' class='telefono'>{{agente.TELEFONO2}}</span>
+									<span ng-click='llamar(agente.TELEFONO3)' ng-if='agente.TELEFONO3' class='telefono'>{{agente.TELEFONO3}}</span>
+									<span ng-click='llamar(agente.TELEFONO4)' ng-if='agente.TELEFONO4' class='telefono'>{{agente.TELEFONO4}}</span>
+									<span ng-click='llamar(agente.TELEFONO5)' ng-if='agente.TELEFONO5' class='telefono'>{{agente.TELEFONO5}}</span>									
+									<span ng-click='llamar(agente.TELEFONO6)' ng-if='agente.TELEFONO6' class='telefono'>{{agente.TELEFONO6}}</span>
+									<span ng-click='llamar(agente.TELEFONO7)' ng-if='agente.TELEFONO7' class='telefono'>{{agente.TELEFONO7}}</span>
+
+
+								</div>
+
+								<div class="form-group">
+									<label for="direccion">Direccion</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.DIRECCION' id="direccion" >
+								</div>
+
+								<div class="form-group">
+									<label for="distrito">Distrito</label>
+
+									<input disabled required type="text" class="form-control"  ng-model='agente.DISTRITO' id="distrito" >
+
+								</div>
+
+								<div class="form-group">
+									<label for="departamento">Departamento</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.DEPARTAMENTO' id="departamento" >
+								</div>
+
+								<div class="form-group">
+									<label for="correo">Correo Electronico</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.MAIL' id="correo" >
+								</div>
+
+								<div class="form-group">
+									<label for="nacimiento">Fecha de Nacimiento</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.FECHA_NACIMIENTO' id="nacimiento" >
+								</div>
+
+						</div>
+
+						
+						<div class='col-md-6'>
+			
+
+								<legend>DATOS DEL SEGURO </legend>
+
+								<div class="form-group">
+									<label for="fechaventa">CALL</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.CALL'  id="fechaventa">
+								</div>
+
+
+								<div class="form-group">
+									<label for="fechaventa">Fecha de venta</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.FECHA'  id="fechaventa">
+								</div>
+
+								
+
+								<div class="form-group">
+									<label for="preciocoberturaplancobertura">Prima Mensual</label>
+									
+
+									<input disabled  required typepreciocoberturaplancobertura="text" class="form-control"  ng-model='agente.PRIMA_MENSUAL' id="preciocoberturaplancobertura" >
+								</div>
+
+
+								<div class="form-group">
+									<label for="preciocoberturaplancobertura">Todo Prima</label>
+								
+									<input disabled  required typepreciocoberturaplancobertura="text" class="form-control"  ng-model='agente.TODO_PRIMA' id="preciocoberturaplancobertura" >
+								</div>
+
+								<div class="form-group">
+									<label for="cobertura">Cobertura</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.COBERTURA' id="cobertura" >
+								</div>
+
+								<div class="form-group">
+									<label for="plancobertura">Plan de Cobertura</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.PLAN_COBERTURA' id="plancobertura" >
+								</div>
+
+								<div class="form-group">
+									<label for="afiliado">Cantidad de Afiliados</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.CANT_AFILIADOS' id="afiliado" afiliado>
+								</div>
+
+								<div class="form-group">
+									<label for="tipotarjetatipoenvio">Tipo de Tarjeta</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.TIPO_TARJETA' id="tipotarjetatipoenvio" >
+								</div>
+
+								<div class="form-group">
+									<label for="tipoenvio">Tipo de Envio</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.TIPO_ENVIO' id="tipoenvio" >
+								</div>
+
+								<div class="form-group">
+									<label for="comercial">Comercial</label>
+									<input disabled required type="text" class="form-control"  ng-model='agente.COMERCIAL' id="comercial" >
+								</div>
+
+
+						</div>
+
+						</div>
+
+
+
+
+
+
+ 
+
+		
+
+	
+

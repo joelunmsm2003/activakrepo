@@ -1,0 +1,255 @@
+
+
+<div class='container'>
+
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>Resultados</h1>
+		<p>			
+
+				<div class='row'>
+
+				<div class='col-md-3'>
+
+				<div class="form-group">
+					<label for="nombre">Agente</label>
+					<input disabled required type="text" class="form-control"  ng-model='filtro.agente'  id="nombre">
+				</div>
+
+				</div>
+
+				<div class='col-md-3'>
+
+				<div class="form-group">
+					<label for="nombre">Fecha Inicio</label>
+					<div  class="form-group">
+					    <p class="input-group">
+					      <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" ng-change='agendar(dt)' is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+					      <span class="input-group-btn">
+					        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+					      </span>
+					    </p>
+					  </div>
+				</div>
+
+				</div>
+
+				<div class='col-md-3'>
+
+				<div class="form-group">
+					<label for="nombre">Fecha Fin</label>
+					<div class="form-group">
+					    <p class="input-group">
+					      <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" ng-change='agendar(dt)' is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+					      <span class="input-group-btn">
+					        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+					      </span>
+					    </p>
+					  </div>
+				</div>
+
+				</div>
+
+				</div>
+
+		</p>
+		
+	</div>
+</div>
+
+
+
+
+
+
+<div class='row'>
+
+<div class='col-md-4'>
+
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<h3 class="panel-title">Total Gestionado</h3>
+		</div>
+		<div class="panel-body">
+
+			<ul class="list-group">
+			  <li class="list-group-item gestionado">
+
+						<div class='row'>	
+						<div class='col-md-10'>Contacto con Titular
+						</div>
+
+						<div class='col-md-2'>{{totaltitular}}
+						</div>
+						</div>
+
+			  </li>
+			  <li class="list-group-item gestionado">
+
+						<div class='row'>	
+						<div class='col-md-10'>Contacto con Tercero
+						</div>
+
+						<div class='col-md-2'>{{totaltercero}}
+						</div>
+						</div>
+
+			  </li>
+			  <li class="list-group-item gestionado">
+			  	
+			  			<div class='row'>	
+						<div class='col-md-10'>No Contacto
+						</div>
+
+						<div class='col-md-2'>{{totalnocontacto}}
+						</div>
+						</div>
+
+			  </li>
+<!-- 
+			   <li class="list-group-item gestionado">
+			  	
+			  			<div class='row'>	
+						<div class='col-md-10'>No Trabajable
+						</div>
+
+						<div class='col-md-2'>5
+						</div>
+						</div>
+
+			  </li> -->
+
+			  <li class="list-group-item gestionado">
+			  	
+			  			 
+
+			  			<div class='row'>	
+						<div class='col-sm-12 col-md-10'>Total
+						</div>
+
+						<div class='col-sm-12 col-md-2'>{{totalgestion}}
+						</div>
+						</div>
+
+			  </li>
+			</ul>
+
+
+
+		
+			
+			
+				
+				
+	
+		</div>
+	</div>
+
+
+
+
+
+
+</div>
+
+<div class='col-md-4'>
+
+		<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title">Contactibilidad</h3>
+		</div>
+		<div class="panel-body">
+			
+			<ul class="list-group">
+			  <li class="list-group-item contactibilidad">
+
+						<div class='row'>	
+						<div class='col-md-10'>Contacto Efectivo
+						</div>
+
+						<div class='col-md-2'>5
+						</div>
+						</div>
+
+			  </li>
+			  <li class="list-group-item contactibilidad">
+
+						<div class='row'>	
+						<div class='col-md-10'>Contacto No Efectivo
+						</div>
+
+						<div class='col-md-2'>5
+						</div>
+						</div>
+
+			  </li>
+			  <li class="list-group-item contactibilidad">
+			  	
+			  			Total
+
+			  </li>
+
+			  </ul>
+
+		</div>
+	</div>
+
+
+</div>
+
+
+<div class='col-md-4'>
+
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">Efectividad</h3>
+		</div>
+		<div class="panel-body">
+			<ul class="list-group">
+			  <li class="list-group-item efectividad">
+
+						<div class='row'>	
+						<div class='col-md-10'>Contacto Efectivo Acepta
+						</div>
+
+						<div class='col-md-2'>5
+						</div>
+						</div>
+
+			  </li>
+			  <li class="list-group-item efectividad">
+
+						<div class='row'>	
+						<div class='col-md-10'>Contacto Efectivo No Acepta
+						</div>
+
+						<div class='col-md-2'>5
+						</div>
+						</div>
+
+			  </li>
+			  <li class="list-group-item efectividad">
+			  	
+			  			Total
+
+			  </li>
+
+			  </ul>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+</div>

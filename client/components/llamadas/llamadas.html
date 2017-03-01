@@ -1,0 +1,30 @@
+		<legend><i class="fa fa-phone-square" aria-hidden="true"></i> HISTORIAL DE LLAMADAS</legend>
+
+
+	<table class="table table-condensed table-hover">
+				<thead>
+					<tr>
+						<th>Telefono</th>
+						<!-- <th>Orden</th> -->
+						<th>Tipo de Contacto</th>
+						<th>Accion</th>
+						<th>Estado</th>
+						<th>Observacion</th>
+						<th>Fecha Agenda</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in llamadas">
+						<td>{{x.telefono}}</td>
+						<!-- <td>{{x.orden}}</td> -->
+						<td>{{x.contacto}}</td>
+						<td>{{x.accion}}</td>
+						<td>{{x.estado}}</td>
+						<td>{{x.observacion}}</td>
+						<td>{{x.fagenda}}</td>
+						
+				
+
+					</tr>
+				</tbody>
+			</table>

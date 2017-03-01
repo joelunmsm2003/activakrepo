@@ -1,0 +1,109 @@
+	<legend>TIPIFICACION {{baseresult.telefono}}</legend>
+
+								<h5> 
+
+								</h5>
+								<div class="form-group">
+									<label for="nombre">Observacion</label>
+
+									
+									<textarea  required type="text" rows="6" class="form-control"  ng-model='baseresult.observacion'  id="nombre"></textarea> 
+								</div>
+
+
+								<div class="form-group">
+
+
+									<label for="nombre">Contacto / {{baseresult.contacto}}</label>
+
+									
+									<select  class='form-control' ng-options="item.id as item.nombre for item in contacto track by item.id" ng-model="baseresult.contacto"></select>
+
+								</div>
+
+								<div class="form-group">
+
+								<label for="accion">Accion / {{baseresult.accion}}  </label>
+								
+								<select 
+										
+										class='form-control'
+								        
+								        ng-options="o.id as o.nombre for o in listaaciones" 
+								        ng-model="baseresult.accion" >
+								</select>
+
+								</div>
+
+
+						
+
+								<div class="form-group">
+
+									<label for="estado">Estado / {{baseresult.estado}}   </label>
+
+									
+									<select    class='form-control' 
+											  ng-model="baseresult.accion"
+											  ng-options="p.id as p.nombre for p in estados" 
+											  
+											  ></select>
+
+								</div>
+
+
+								
+									<div class="form-group"> 
+
+										<label >Fecha Agenda: {{baseresult.fagenda}}</label>
+
+										<div class="btn-group">
+										  <button type="button" class="btn btn-default" ng-click='muestraagendar=true;muestrafono=false'>Agendar</button>
+										  <button type="button" ng-click='muestrafono=true;muestraagendar=false' class="btn btn-default">Agregar Telefono</button>
+									
+										</div>
+
+									</div>
+
+
+
+
+									
+
+
+									<div class="form-group">
+
+									<label ng-show='muestraagendar' for="estado"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar</label>
+
+
+								   <div ng-show='muestraagendar' class="form-group">
+								        <p class="input-group">
+								          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="baseresult.fecha" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+								          <span class="input-group-btn">
+								            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+								          </span>
+								        </p>
+								      </div>
+
+								    </div>
+
+								     <div class="form-group">
+
+
+									<div ng-show='muestraagendar && muestratime' uib-timepicker ng-model="mytime"  hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
+
+									</div>
+
+									<div ng-show='muestrafono' class="form-group">
+
+
+									<label for="estado"><i class="fa fa-phone-square" aria-hidden="true"></i> Telefono Adicional</label>
+									<input ng-model='baseresult.phone' class='form-control' placeholder="Telefono Adicional" />
+
+									</div>
+
+
+								 
+									</div>
+							
+

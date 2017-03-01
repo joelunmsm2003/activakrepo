@@ -1,0 +1,8 @@
+client\node_modules\
+server\node_modules\
+client/node_modules/
+client/bower_components/
+server/node_modules/
+run.sh
+client/components/app.js
+build/controllers/conexion.php

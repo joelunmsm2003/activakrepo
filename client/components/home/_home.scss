@@ -1,0 +1,55 @@
+.informe{
+
+	padding: 7em;
+}
+
+.imagen{
+
+	width:100%;
+	background:#2969a8;
+	
+}
+
+.paralelogramo {
+
+
+    transform: skew(-4deg);
+}
+
+.search{
+
+    width: auto;
+    padding: 28px;
+    top: 171px;
+    position: fixed;
+    right: 0;
+    padding: 10px;
+    border: 1px solid #2969a8;
+    border: 1px 0px 1px 1px;
+    color: #2969a8;
+    transition: width 1s ease;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+}
+
+.search:hover{
+
+
+      transform: rotate(-9deg) scale(1,1);
+       background:  #2969a8;
+    	border: 1px 0px 1px 1px;
+    	color:#fff;
+}
+
+.list-group-item:hover{
+
+    background: $state-success-bg;
+    color:#fff;
+}
+
+// ul, ol {
+
+//     font-size: 12px;
+// }
